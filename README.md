@@ -2,7 +2,7 @@
 
 Bu proje, telekomünikasyon müşteri verilerini analiz ederek hangi müşterilerin aboneliklerini iptal edebileceğini (churn) makine öğrenimi algoritmaları kullanarak tahmin etmeyi amaçlayan bir veri bilimi çalışmasıdır.
 
-## 📂 Proje Yapısı
+## Proje Yapısı
 
 ```text
 Customer_Churn_Prediction/
@@ -26,7 +26,7 @@ Customer_Churn_Prediction/
 └── requirements.txt         # Projenin çalışması için gereken Python kütüphaneleri
 ```
 
-## 🚀 Kurulum
+## Kurulum
 
 1. **Python Ortamını Hazırlayın**  
    Projeyi çalıştırmak için Python 3.8 veya üzeri bir sürümün yüklü olduğundan emin olun.
@@ -37,7 +37,7 @@ Customer_Churn_Prediction/
    pip install -r requirements.txt
    ```
 
-## 🧠 Nasıl Çalışır?
+## Nasıl Çalışır?
 
 #### 1. Veri Analizi ve Model Üretimi
 Bütün veri analizleri, eksik veri doldurma, özellik mühendisliği (Feature Engineering) ve **Lojistik Regresyon** algoritmasının eğitilmesi işlemleri `notebooks/01_veri_kesfi.ipynb` dosyasının içinde gerçekleşmektedir. Bu dosyayı baştan sona çalıştırdığınızda oluşturulan modeller otomatik olarak `models/` klasörüne, işlenmiş temiz veriler ise `data/processed/` klasörüne kaydedilir.
@@ -56,13 +56,13 @@ python tahmin_yap.py
 #### 3. Kendi Projelerinizde Kullanım (Pipeline)
 `src/pipeline.py` içerisindeki `musteri_kayip_tahmini` fonksiyonu bir uygulamaya, web sitesine veya farklı bir betiğe rahatça entegre edilecek şekilde tasarlanmıştır. İlgili dosyaya canlı bir müşteri verisi sözlük (dictionary) şeklinde iletildiğinde model tarafından oranlar geri döndürülür.
 
-## 📊 Başarı Metrikleri
+## Başarı Metrikleri
 
 Projedeki güncel Lojistik Regresyon modeli sınıf dengesizliğini çözmek için **SMOTE** algoritması kullanarak başarılı şekilde optimize edilmiştir:
 - **Duyarlılık (Recall - Sınıf 1):** %74 (Hedefimiz olan riskli müşterileri yüksek oranda tespit eder)
 - **Doğruluk (Accuracy):** %76
 
-## 🛠️ Kullanılan Teknolojiler
+## Kullanılan Teknolojiler
 * **Python**, **Pandas**, **NumPy** (Veri İşleme ve Manipülasyonu)
 * **Scikit-Learn**, **Imbalanced-learn (SMOTE)** (Makine Öğrenimi ve Modelleme)
 * **Matplotlib**, **Seaborn** (Veri Görselleştirme)
